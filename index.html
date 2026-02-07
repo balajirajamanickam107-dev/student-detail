@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Student Details</h1>
+      <p>Manage and view student information</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Add Student</h2>
+        <form id="student-form">
+          <div class="form-row">
+            <div class="form-control">
+              <label for="studentId">Student ID</label>
+              <input type="text" id="studentId" required />
+            </div>
+            <div class="form-control">
+              <label for="studentName">Name</label>
+              <input type="text" id="studentName" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-control">
+              <label for="studentCourse">Course</label>
+              <input type="text" id="studentCourse" required />
+            </div>
+            <div class="form-control">
+              <label for="studentEmail">Email</label>
+              <input type="email" id="studentEmail" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-control">
+              <label for="studentGrade">Grade</label>
+              <select id="studentGrade" required>
+                <option value="">Select</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="F">F</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn primary">Add Student</button>
+          <span id="form-message" class="form-message"></span>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="table-header">
+          <h2>Student List</h2>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by name, ID, or course..."
+          />
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Email</th>
+                <th>Grade</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="studentTableBody">
+              <!-- Rows will be added by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <small>&copy; <span id="year"></span> Student Details App</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
